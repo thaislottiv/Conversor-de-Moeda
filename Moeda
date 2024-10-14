@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class ConversorMoeda {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double taxaDolar = 5.30; // Exemplo de taxa de conversão
+
+        System.out.println("Digite o valor:");
+        double valor = scanner.nextDouble();
+
+        System.out.println("Escolha a conversão: 1 para Real -> Dólar, 2 para Dólar -> Real");
+        int opcao = scanner.nextInt();
+
+        switch (opcao) {
+            case 1:
+                System.out.println("Valor em dólares: " + valor / taxaDolar);
+                break;
+            case 2:
+                System.out.println("Valor em reais: " + valor * taxaDolar);
+                break;
+            default:
+                System.out.println("Opção inválida.");
+        }
+    }
+}
